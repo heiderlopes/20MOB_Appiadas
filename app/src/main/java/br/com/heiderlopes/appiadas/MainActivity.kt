@@ -23,13 +23,10 @@ class MainActivity : AppCompatActivity() {
         val jokers = resources.getStringArray(R.array.jokers)
         val numberJoker = Random().nextInt(jokers.size)
         val joker = jokers[numberJoker]
-        show(joker)
+        tvJoker.text = joker
         playSong()
     }
 
-    private fun show(joker: String) {
-        tvJoker.text = joker
-    }
 
     private fun playSong() {
         val mediaPlayer = MediaPlayer.create(this, R.raw.badumtss)
